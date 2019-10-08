@@ -1,0 +1,10 @@
+---
+- name: get the hostname
+  gather_facts: no
+  hosts: localhost
+  tasks:
+    - name: get me the hostname
+      shell: hostname
+      register: result
+    - debug:
+        msg: "{{ result.stdout }}"
