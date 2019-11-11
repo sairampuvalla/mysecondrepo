@@ -4,7 +4,7 @@
   hosts: localhost
   tasks:
     - name: get me the hostname
-      shell: hostname
+      command: hostname
       register: result
     - debug:
         msg: "{{ result.stdout }}"
