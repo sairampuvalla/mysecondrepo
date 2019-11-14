@@ -1,0 +1,10 @@
+---
+- name: get the output in HTML format
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: get the running process
+      command:  pwsh -command get-process|  select Name | convertto-html
+      register: output
+    - debug:
+        msg: "{{  output }}"

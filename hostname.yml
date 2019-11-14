@@ -4,7 +4,11 @@
   hosts: localhost
   tasks:
     - name: get me the hostname
+<<<<<<< HEAD
       command: hostname
+=======
+      shell: adabdsan
+>>>>>>> b5b22a9d2f5947bd289fe731e4e153d32244bfaf
       register: result
     - debug:
         msg: "{{ result.stdout }}"
