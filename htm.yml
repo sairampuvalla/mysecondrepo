@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: get the running process
-      command:  pwsh -command get-process|  select Name | convertto-html
+      command:  pwsh -command get-process|convertto-html
       register: output
     - debug:
         msg: "{{  output }}"
